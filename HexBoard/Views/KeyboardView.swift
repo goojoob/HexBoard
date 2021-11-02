@@ -45,7 +45,7 @@ struct KeyboardView: View {
             }
             .padding()
             .frame(width: UIScreen.screenWidth, height: keyboardHeight)
-            .background(.gray)
+            .background(.secondary)
             .clipShape(RoundedCorner(radius: 20, corners: [.topLeft, .topRight]))
     }
 }
