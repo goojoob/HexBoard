@@ -35,7 +35,7 @@ ZStack {
 
 _It needs two parameters to work:_
 
-* `showKeyboard: bool` - in order to toggle the view of the HexBoard
+* `showKeyboard: Bool` - in order to toggle the view of the HexBoard
 * `text: String` - the value on which the HexBoard works
 
 <br/>
