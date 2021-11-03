@@ -61,7 +61,7 @@ _You need all the files (except the MainView that is an example) in your XCode p
 
 ## Author ✒️
 
-* **Goojoob.dev** - *Original development* - [goojoob](https://twitter.com/goojoobdev)
+<img src ="https://goojoob.dev/images/logo.svg" width=30 /> **Goojoob.dev** - *Original development* - [goojoob](https://twitter.com/goojoobdev) 
 
 <br/>
 
