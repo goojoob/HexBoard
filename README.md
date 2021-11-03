@@ -25,7 +25,7 @@ _HexBoard is a SwiftUI KeyboardView that is initially positioned off the screen_
 
 _It needs to be stacked in the last position of a ZStack in order to overlap all the other views when it shows_
 
-```
+```swift
 ZStack {
   //... your views here ...
 
