@@ -20,7 +20,6 @@ struct KeyStyle: ViewModifier {
 }
 
 struct ShadowStyle: ViewModifier {
-
     var opacity: CGFloat
     var radius: CGFloat
     var x: CGFloat
@@ -33,7 +32,6 @@ struct ShadowStyle: ViewModifier {
 }
 
 struct RoundedCorner: Shape {
-
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
 

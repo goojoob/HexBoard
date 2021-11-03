@@ -33,10 +33,6 @@ struct MainView: View {
             }
 
             KeyboardView(text: $text, showKeyboard: $showKeyboard)
-                .offset(y: showKeyboard ?
-                        (UIScreen.screenHeight / 2) - (keyboardHeight / 2) :
-                        UIScreen.screenHeight)
-
         }
     }
 }

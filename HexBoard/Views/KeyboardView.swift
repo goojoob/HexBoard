@@ -47,6 +47,7 @@ struct KeyboardView: View {
             .frame(width: UIScreen.screenWidth, height: keyboardHeight)
             .background(.secondary)
             .clipShape(RoundedCorner(radius: 20, corners: [.topLeft, .topRight]))
+            .offset(y: showKeyboard ? (UIScreen.screenHeight / 2) - (keyboardHeight / 2) : UIScreen.screenHeight)
     }
 }
 

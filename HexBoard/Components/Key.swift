@@ -14,8 +14,6 @@ struct Key: View {
     @Binding var text: String
     @Binding var showKeyboard: Bool
     
-    @State var clicked: Bool = false
-    
     var body: some View {
         Button {
             switch letter {
@@ -32,7 +30,7 @@ struct Key: View {
             }
         } label: {
             Text(letter)
-                .foregroundColor(Color.primary)
+                .foregroundColor(.primary)
                 .frame(width: keyType == .letterKey ? 40 : keyType == .specialKey ? 106 : 60,
                        height: 40)
                 .keyStyle(keyType: keyType)
@@ -43,6 +41,6 @@ struct Key: View {
 
 struct Key_Previews: PreviewProvider {
     static var previews: some View {
-        Key(letter: "A", keyType: .letterKey, text: .constant(""), showKeyboard: .constant(true), clicked: false)
+        Key(letter: "A", keyType: .letterKey, text: .constant(""), showKeyboard: .constant(true))
     }
 }
