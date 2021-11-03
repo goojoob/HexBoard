@@ -48,6 +48,9 @@ _You need all the files (except the MainView that is an example) in your XCode p
 
 ### HexBoard working in a real iOS App 🔩
 
+<p align="left">
+    <img src ="https://goojoob.dev/hexBoard/play2.gif" width="300" />
+</p>
 
 <br/>
 
