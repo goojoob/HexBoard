@@ -28,15 +28,7 @@ struct Key: View {
                     showKeyboard.toggle()
                 }
             default:
-                if text.count < 6 {
-                    text.append(letter)
-                }
-                
-                if text.count >= 6 {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
-                        showKeyboard.toggle()
-                    }
-                }
+                text.append(letter)
             }
         } label: {
             Text(letter)
