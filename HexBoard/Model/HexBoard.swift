@@ -7,11 +7,17 @@
 
 import Foundation
 import SwiftUI
-
-let keyboardHeight: CGFloat = 250
+import Combine
 
 enum KeyType: String, CaseIterable {
     case numberKey
     case letterKey
     case specialKey
+}
+
+final class HexBoard: ObservableObject {
+    @Published var showKeyboard: Bool = false
+    @Published var text: String = ""
+    
+    var keyboardHeight: CGFloat = 250
 }

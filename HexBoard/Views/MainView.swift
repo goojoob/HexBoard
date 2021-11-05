@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var showKeyboard: Bool = false
-    @State private var text: String = ""
+    @EnvironmentObject var hexBoard: HexBoard
     
     var body: some View {
         ZStack {
@@ -17,13 +16,13 @@ struct MainView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Text(text)
+                Text(hexBoard.text)
                     .bold()
                     .frame(width: 200, height: 200)
 
                 Button {
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
-                        showKeyboard.toggle()
+                        hexBoard.showKeyboard.toggle()
                     }
                 } label: {
                     Text("Click Me")
@@ -32,7 +31,7 @@ struct MainView: View {
                 Spacer()
             }
 
-            KeyboardView(text: $text, showKeyboard: $showKeyboard)
+            KeyboardView()
         }
     }
 }
