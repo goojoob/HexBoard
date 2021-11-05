@@ -41,5 +41,6 @@ struct Key: View {
 struct Key_Previews: PreviewProvider {
     static var previews: some View {
         Key(letter: "A", keyType: .letterKey)
+            .environmentObject(HexBoard())
     }
 }
