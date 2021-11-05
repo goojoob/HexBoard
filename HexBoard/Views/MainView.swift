@@ -16,10 +16,14 @@ struct MainView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
+                TextField("Text", text: $hexBoard.text)
+                    .frame(width: 200, height: 200)
+                    .padding()
+                
                 Text(hexBoard.text)
                     .bold()
-                    .frame(width: 200, height: 200)
-
+                    .padding()
+                
                 Button {
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
                         hexBoard.showKeyboard.toggle()
