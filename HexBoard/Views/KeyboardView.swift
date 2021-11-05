@@ -8,51 +8,51 @@
 import SwiftUI
 
 struct KeyboardView: View {
-    @Binding var text: String
-    @Binding var showKeyboard: Bool
+    @EnvironmentObject var hexBoard: HexBoard
     
     var body: some View {
             
             VStack {
                 HStack {
-                    Key(letter: "A", keyType: .letterKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "1", keyType: .numberKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "2", keyType: .numberKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "3", keyType: .numberKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "D", keyType: .letterKey, text: $text, showKeyboard: $showKeyboard)
+                    Key(letter: "A", keyType: .letterKey)
+                    Key(letter: "1", keyType: .numberKey)
+                    Key(letter: "2", keyType: .numberKey)
+                    Key(letter: "3", keyType: .numberKey)
+                    Key(letter: "D", keyType: .letterKey)
                 }
                 HStack {
-                    Key(letter: "B", keyType: .letterKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "4", keyType: .numberKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "5", keyType: .numberKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "6", keyType: .numberKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "E", keyType: .letterKey, text: $text, showKeyboard: $showKeyboard)
+                    Key(letter: "B", keyType: .letterKey)
+                    Key(letter: "4", keyType: .numberKey)
+                    Key(letter: "5", keyType: .numberKey)
+                    Key(letter: "6", keyType: .numberKey)
+                    Key(letter: "E", keyType: .letterKey)
                 }
                 HStack {
-                    Key(letter: "C", keyType: .letterKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "7", keyType: .numberKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "8", keyType: .numberKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "9", keyType: .numberKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "F", keyType: .letterKey, text: $text, showKeyboard: $showKeyboard)
+                    Key(letter: "C", keyType: .letterKey)
+                    Key(letter: "7", keyType: .numberKey)
+                    Key(letter: "8", keyType: .numberKey)
+                    Key(letter: "9", keyType: .numberKey)
+                    Key(letter: "F", keyType: .letterKey)
                 }
                 HStack {
-                    Key(letter: "<", keyType: .specialKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "0", keyType: .numberKey, text: $text, showKeyboard: $showKeyboard)
-                    Key(letter: "intro", keyType: .specialKey, text: $text, showKeyboard: $showKeyboard)
+                    Key(letter: "<", keyType: .specialKey)
+                    Key(letter: "0", keyType: .numberKey)
+                    Key(letter: "intro", keyType: .specialKey)
 
                 }
                 Spacer()
             }
             .padding()
-            .frame(width: UIScreen.screenWidth, height: keyboardHeight)
+            .frame(width: UIScreen.screenWidth, height: hexBoard.keyboardHeight)
             .background(.secondary)
             .clipShape(RoundedCorner(radius: 20, corners: [.topLeft, .topRight]))
-            .offset(y: showKeyboard ? (UIScreen.screenHeight / 2) - (keyboardHeight / 2) : UIScreen.screenHeight)
+            .offset(y: hexBoard.showKeyboard ? (UIScreen.screenHeight / 2) - (hexBoard.keyboardHeight / 2) : UIScreen.screenHeight)
     }
 }
 
 struct KeyboardView_Previews: PreviewProvider {
     static var previews: some View {
-        KeyboardView(text: .constant(""), showKeyboard: .constant(true))
+        KeyboardView()
+            .environmentObject(HexBoard())
     }
 }

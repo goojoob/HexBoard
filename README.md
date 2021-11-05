@@ -29,7 +29,7 @@ _It needs to be stacked in the last position of a ZStack in order to overlap all
 ZStack {
   //... your views here ...
 
-  KeyboardView(text: $text, showKeyboard: $showKeyboard)
+  KeyboardView()
 }
 ```
 
@@ -37,6 +37,28 @@ _It needs two parameters to work:_
 
 * `showKeyboard: Bool` - in order to toggle the view of the HexBoard
 * `text: String` - the value on which the HexBoard works
+
+_Just inject the HexBoard as an Environment Object:_
+
+```swift
+@main
+struct HexBoardApp: App {
+    @StateObject private var hexBoard = HexBoard()
+
+    var body: some Scene {
+        WindowGroup {
+            MainView()
+                .environmentObject(hexBoard)
+        }
+    }
+}
+```
+
+_And use it where needed:_
+
+```swift
+ @EnvironmentObject var hexBoard: HexBoard
+```
 
 <br/>
 

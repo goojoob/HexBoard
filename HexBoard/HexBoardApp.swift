@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct HexBoardApp: App {
+    @StateObject private var hexBoard = HexBoard()
+
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(hexBoard)
         }
     }
 }
