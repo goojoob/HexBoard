@@ -58,6 +58,10 @@ _And use it where needed:_
 
 ```swift
  @EnvironmentObject var hexBoard: HexBoard
+
+TextField("Text", text: $hexBoard.text)
+
+Text(hexBoard.text)
 ```
 
 <br/>
