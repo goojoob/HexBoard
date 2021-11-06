@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct KeyboardView: View {
+struct HexBoardView: View {
     @EnvironmentObject var hexBoard: HexBoard
     
     var body: some View {
@@ -43,16 +43,16 @@ struct KeyboardView: View {
                 Spacer()
             }
             .padding()
-            .frame(width: UIScreen.screenWidth, height: hexBoard.keyboardHeight)
+            .frame(width: UIScreen.screenWidth, height: hexBoard.height)
             .background(.secondary)
             .clipShape(RoundedCorner(radius: 20, corners: [.topLeft, .topRight]))
-            .offset(y: hexBoard.showKeyboard ? (UIScreen.screenHeight / 2) - (hexBoard.keyboardHeight / 2) : UIScreen.screenHeight)
+            .offset(y: hexBoard.show ? (UIScreen.screenHeight / 2) - (hexBoard.height / 2) : UIScreen.screenHeight)
     }
 }
 
-struct KeyboardView_Previews: PreviewProvider {
+struct HexBoardView_Previews: PreviewProvider {
     static var previews: some View {
-        KeyboardView()
+        HexBoardView()
             .environmentObject(HexBoard())
     }
 }

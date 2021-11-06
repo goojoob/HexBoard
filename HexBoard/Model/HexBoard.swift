@@ -15,14 +15,14 @@ enum KeyType: String, CaseIterable {
 }
 
 final class HexBoard: ObservableObject {
-    @Published var showKeyboard: Bool
+    @Published var show: Bool
     @Published var text: String
 
-    var keyboardHeight: CGFloat
+    var height: CGFloat
 
     init() {
-        self.keyboardHeight = 250
+        self.height = 250
         self.text = ""
-        self.showKeyboard = false
+        self.show = false
     }
 }

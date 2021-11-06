@@ -22,7 +22,7 @@ struct Key: View {
                 }
             case "intro":
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
-                    hexBoard.showKeyboard.toggle()
+                    hexBoard.show.toggle()
                 }
             default:
                 hexBoard.text.append(letter)

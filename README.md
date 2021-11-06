@@ -21,7 +21,7 @@ _HexBoard is an Hexadecimal Keyboard for `iOS` made entirely using `SwiftUI 3` a
 
 ### Usage 🔧
 
-_HexBoard is a SwiftUI KeyboardView that is initially positioned off the screen_
+_HexBoard is a SwiftUI HexBoardView that is initially positioned off the screen_
 
 _It needs to be stacked in the last position of a ZStack in order to overlap all the other views when it shows_
 
@@ -29,13 +29,13 @@ _It needs to be stacked in the last position of a ZStack in order to overlap all
 ZStack {
   //... your views here ...
 
-  KeyboardView()
+  HexBoardView()
 }
 ```
 
 _It needs two parameters to work:_
 
-* `showKeyboard: Bool` - in order to toggle the view of the HexBoard
+* `show: Bool` - in order to toggle the view of the HexBoard
 * `text: String` - the value on which the HexBoard works
 
 _Just inject the HexBoard as an Environment Object:_

@@ -26,7 +26,7 @@ struct MainView: View {
                 
                 Button {
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
-                        hexBoard.showKeyboard.toggle()
+                        hexBoard.show.toggle()
                     }
                 } label: {
                     Text("Click Me")
@@ -35,7 +35,7 @@ struct MainView: View {
                 Spacer()
             }
 
-            KeyboardView()
+            HexBoardView()
         }
     }
 }
