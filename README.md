@@ -33,6 +33,7 @@ ZStack {
 }
 ```
 
+
 _It needs two parameters to work:_
 
 * `show: Bool` - in order to toggle the view of the HexBoard
